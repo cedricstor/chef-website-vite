@@ -11,14 +11,16 @@ function App() {
         </header>
 
         <nav style={{ backgroundColor: '#333', color: '#fff', padding: '0.75rem', textAlign: 'center' }}>
-          <Link to="/" style={navStyle}>About</Link>
+          <Link to="/" style={navStyle}>Home</Link>
+          <Link to="/about" style={navStyle}>About</Link>
           <Link to="/menu" style={navStyle}>Menu</Link>
           <Link to="/contact" style={navStyle}>Contact</Link>
         </nav>
 
         <div style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<About />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
@@ -46,6 +48,17 @@ const sectionStyle = {
   maxWidth: '900px',
   margin: 'auto'
 };
+
+function Home() {
+  return (
+    <section style={sectionStyle}>
+      <h2>Welcome to Matric64</h2>
+      <p>
+        Experience refined private chef services tailored to your vision. Whether it’s a celebration or an elegant evening at home, Cedric Bendavid crafts unforgettable meals from scratch.
+      </p>
+    </section>
+  );
+}
 
 function About() {
   return (

@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ minHeight: '100vh', backgroundColor: '#fff', display: 'flex', flexDirection: 'column' }}>
         <header style={{ backgroundColor: '#000', color: '#fff', padding: '2.5rem 1rem', textAlign: 'center' }}>
           <h1>Matric64</h1>
           <p style={{ fontSize: '1.2rem', marginTop: '0.5rem' }}>Refined Private Chef Services by Cedric Bendavid</p>
         </header>
 
-        <nav style={{ backgroundColor: '#333', color: '#fff', padding: '0.75rem', textAlign: 'center' }}>
+        <nav style={{ backgroundColor: '#444', color: '#fff', padding: '0.75rem', textAlign: 'center' }}>
           <Link to="/" style={navStyle}>Home</Link>
           <Link to="/about" style={navStyle}>About</Link>
           <Link to="/menu" style={navStyle}>Menu</Link>
@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </div>
 
-        <footer style={{ backgroundColor: '#1a1a1a', color: '#bbb', textAlign: 'center', padding: '1.25rem', fontSize: '0.95rem' }}>
+        <footer style={{ backgroundColor: '#1a1a1a', color: '#ccc', textAlign: 'center', padding: '2rem', fontSize: '1rem' }}>
           <p>&copy; 2025 Matric64. All rights reserved. | Designed by Cedric Bendavid</p>
         </footer>
       </div>
@@ -44,9 +44,11 @@ const navStyle = {
 };
 
 const sectionStyle = {
-  padding: '2.5rem 1.5rem',
-  maxWidth: '900px',
-  margin: 'auto'
+  padding: '4rem 2rem',
+  maxWidth: '1000px',
+  margin: 'auto',
+  flexGrow: 1,
+  width: '100%',
 };
 
 function Home() {
